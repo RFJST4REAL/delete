@@ -11,6 +11,7 @@
     ],
     "overrides": [],
     "parserOptions": {
+<<<<<<< HEAD
         "ecmaVersion": "latest",
         "sourceType": "module",
         "project": ["./tsconfig.json"]
@@ -23,3 +24,17 @@
     },
     "rules": {}
 }
+=======
+        // "ecmaVersion": "latest",
+        // "sourceType": "module",
+        // "project": "./tsconfig.json"
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": ["react"],
+    "rules": {}
+}
+>>>>>>> 8de96bd375a943535746b0d4fb6d16d14a630a9b

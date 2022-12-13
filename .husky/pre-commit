@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+<<<<<<< HEAD
+=======
+npx pretty-quick --staged
+>>>>>>> 8de96bd375a943535746b0d4fb6d16d14a630a9b
 npx --no-install lint-staged
