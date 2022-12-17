@@ -1,8 +1,7 @@
-name: 'size'
+name: size-limit
 on:
     pull_request:
-        branches:
-            - master
+        types: [opened, synchronize]
 
 jobs:
     size:
@@ -14,6 +13,6 @@ jobs:
             - uses: andresz1/size-limit-action@v1
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  build_script: npm run build
-                  skip_step: install
-                  directory: src/components/
+                  pattern: "./dist/technotic.cjs.production.min.js"
+                  build-script: "dist:esbuild-no-dup-check"
+                  clean-script: "clean-lockfiles"
